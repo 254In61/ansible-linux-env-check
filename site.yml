@@ -1,9 +1,8 @@
 ---
 - name: Check environment setup
-  hosts: all # The inventory name built in aap
-  # connection: local
+  hosts: all  # The inventory name built in aap
   gather_facts: true
- 
+
   tasks:
     - name: Include vars
       ansible.builtin.include_vars:
