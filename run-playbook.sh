@@ -1,6 +1,10 @@
 #!/usr/bin/bash
 
 install-role(){
+   # to clean up faulty role before re-installing
+   ansible-galaxy role remove ansible-role-rhel-test
+
+   # Install needed roles
    ansible-galaxy install -r roles/requirements.yml 
 }
 
