@@ -1,6 +1,6 @@
 ---
 - name: Check environment setup
-  hosts: all  # The inventory name built in aap
+  hosts: linux  # The inventory name built in aap
   gather_facts: true
 
   tasks:
@@ -13,7 +13,8 @@
         name: ansible-role-rhel-test
       vars:
         _env_: true
-        _tmp_file_: /tmp/checks.txt
+        _date_: true
+        _tmp_file_: "/tmp/{{ inventory_hostname }}-checks.txt"
 
   post_tasks:
     - name: Debug the outcome
