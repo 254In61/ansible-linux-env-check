@@ -1,0 +1,20 @@
+---
+- name: Check environment setup
+  hosts: all # The inventory name built in aap
+  # connection: local
+  gather_facts: false
+ 
+  tasks:
+    - name: Include vars
+      ansible.builtin.include_vars:
+        dir: group_vars
+
+    - name: Import environment role
+      ansible.builtin.import_role:
+        name: environment
+
+  post_tasks:
+    - name: Debug the outcome
+      ansible.builtin.debug:
+        msg:
+          - "{{ inventory_hostname }} managed successfully "

@@ -1,0 +1,5 @@
+---
+# Variable that cut across all
+container_name_prefix: test_container
+container_image: python:3.9-slim
+number_of_containers: 3

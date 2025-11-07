@@ -1,0 +1,4 @@
+# You don't want your logs online!
+logs/
+files/
+secrets/
