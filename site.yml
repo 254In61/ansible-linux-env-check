@@ -11,6 +11,9 @@
     - name: Import environment role
       ansible.builtin.import_role:
         name: ansible-role-rhel-test
+      vars:
+        _env_: true
+        _tmp_file_: /tmp/checks.txt
 
   post_tasks:
     - name: Debug the outcome
