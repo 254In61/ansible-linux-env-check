@@ -2,7 +2,7 @@
 - name: Check environment setup
   hosts: all # The inventory name built in aap
   # connection: local
-  gather_facts: false
+  gather_facts: true
  
   tasks:
     - name: Include vars
@@ -11,7 +11,7 @@
 
     - name: Import environment role
       ansible.builtin.import_role:
-        name: environment
+        name: ansible-role-rhel-test
 
   post_tasks:
     - name: Debug the outcome
