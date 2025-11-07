@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 install-role(){
+   # In AAP this happens as one of the Jobs
    # to clean up faulty role before re-installing
    ansible-galaxy role remove ansible-role-rhel-test
 
