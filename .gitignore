@@ -2,3 +2,4 @@
 logs/
 files/
 secrets/
+'roles  # Will still default to roles dir if missed.'/
